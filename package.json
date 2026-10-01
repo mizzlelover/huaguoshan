@@ -1,0 +1,11 @@
+{
+  "name": "huaguoshan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "《西游记》花果山 · 齐天大圣故里 —— 纯程序化生成的 Three.js 实时 3D 场景",
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 8123"
+  }
+}

@@ -1,0 +1,22 @@
+# 系统
+.DS_Store
+
+# 依赖
+node_modules/
+package-lock.json
+
+# 开发期脚本与校验工具
+tools/
+
+# 宣传片成片与制作素材
+out/
+audio/
+.frames/
+.frames-v/
+.cards/
+.cards-v/
+RELEASE-x.md
+shots/v-hud.png
+
+# AI 会话记录
+.specstory/

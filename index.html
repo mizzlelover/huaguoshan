@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>花果山 · 齐天大圣故里</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23123'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23e8c14e'%3E桃%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="./styles/ui.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.min.js"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<div id="boot">
+  <div class="boot-inner">
+    <div class="boot-seal">花<br />果<br />山</div>
+    <div class="boot-title">东 胜 神 陆 · 傲 来 国</div>
+    <div class="boot-sub">正在开辟洞天福地…</div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-tip" id="bootTip">乱石穿空，惊涛拍岸，卷起千堆雪</div>
+  </div>
+</div>
+
+<div id="crosshair"><span></span><span></span><span></span><span></span></div>
+
+<div id="hud" class="hidden">
+  <div id="compass"><div id="compassStrip"></div><div id="compassNeedle"></div></div>
+  <div id="modeTag"><b id="modeName">行走</b><i id="modeHint">SPACE 跳 · F 飞行 · Q 穿墙</i></div>
+  <div id="placeName">傲来国 · 花果山</div>
+  <canvas id="minimap" width="188" height="188"></canvas>
+  <div id="stats"></div>
+</div>
+
+<div id="keycard" class="hidden">
+  <div class="kc-title">操 作</div>
+  <div class="kc-grid">
+    <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>行走 / 前后左右</span></div>
+    <div><kbd>鼠标</kbd><span>转视角</span></div>
+    <div><kbd>Shift</kbd><span>疾行 / 加速飞行</span></div>
+    <div><kbd>Space</kbd><span>跳跃 / 上升</span></div>
+    <div><kbd>Ctrl</kbd><span>下蹲 / 下降</span></div>
+    <div><kbd>F</kbd><span>切换 自由飞行</span></div>
+    <div><kbd>Q</kbd><span>切换 穿墙 无碰撞</span></div>
+    <div><kbd>C</kbd><span>切换 第三人称 环绕</span></div>
+    <div><kbd>1</kbd>-<kbd>6</kbd><span>传送 景点</span></div>
+    <div><kbd>N</kbd><span>昼夜循环</span></div>
+    <div><kbd>T</kbd><span>自动巡游</span></div>
+    <div><kbd>H</kbd><span>隐藏 / 显示 此面板</span></div>
+    <div><kbd>R</kbd><span>回到 山门</span></div>
+    <div><kbd>P</kbd><span>截图</span></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<div id="lockHint" class="hidden">
+  <div class="lock-card">
+    <div class="lock-big">点 击 进 入</div>
+    <div class="lock-sub">花果山 · 水帘洞 · 齐天大圣故里</div>
+    <div class="lock-keys"><kbd>WASD</kbd> 行走　<kbd>F</kbd> 自由飞行　<kbd>鼠标</kbd> 视角　<kbd>ESC</kbd> 释放鼠标</div>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
